@@ -4,7 +4,7 @@
 const MyTracker = (function() {
     // Конфигурация
     const config = {
-        endpoint: '', // Вставьте сюда ваш URL с Webhook.site
+        endpoint: 'https://webhook.site/0a609101-dc7c-4b98-bee9-c2b9ee3fdd1f', // Вставьте сюда ваш URL с Webhook.site
         debug: false,
         trackClicks: true,
         trackScroll: true,
