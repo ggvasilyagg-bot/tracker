@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой тестовый сайт для аналитики</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем наш трекер -->
+    <script src="myTracker.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1 id="main-title">Добро пожаловать на мой сайт!</h1>
+        <nav>
+            <button id="home-btn" class="nav-btn">Главная</button>
+            <button id="about-btn" class="nav-btn">Обо мне</button>
+            <button id="contacts-btn" class="nav-btn">Контакты</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="section">
+            <h2>Привет, я начинающий веб-аналитик</h2>
+            <p>Это тестовый сайт для сбора данных о пользовательских взаимодействиях.</p>
+            <button id="cta-button" class="primary-btn">Узнать больше</button>
+            <button id="secondary-btn" class="secondary-btn">Просто нажми меня</button>
+        </section>
+
+        <section id="about" class="section">
+            <h2>Обо мне</h2>
+            <p>Здесь я учусь собирать и анализировать данные...</p>
+            <a href="https://github.com" id="github-link" target="_blank">Мой GitHub</a>
+            <a href="https://linkedin.com" id="linkedin-link" target="_blank">Мой LinkedIn</a>
+        </section>
+
+        <section id="form-section" class="section">
+            <h2>Подпишитесь на обновления</h2>
+            <form id="subscribe-form">
+                <input type="email" id="email-input" placeholder="Ваш email" required>
+                <button type="submit" id="submit-btn">Подписаться</button>
+            </form>
+        </section>
+
+        <section id="long-content" class="section">
+            <h2>Прокрутите меня!</h2>
+            <div style="height: 1500px; background: linear-gradient(#f5f5f5, #e0e0e0);">
+                <p style="padding-top: 800px;">Вы долистали до этой точки! 👏</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Тестовый проект по веб-аналитике</p>
+        <button id="footer-btn">Наверх</button>
+    </footer>
+
+    <!-- Подключаем скрипт инициализации трекера в конце body -->
+    <script>
+        // Инициализируем трекер после загрузки страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.MyTracker) {
+                MyTracker.init({
+                    debug: true,
+                    trackClicks: true,
+                    trackScroll: true,
+                    trackForms: true
+                });
+            }
+        });
+    </script>
+</body>
+</html>
